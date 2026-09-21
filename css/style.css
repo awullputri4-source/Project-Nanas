@@ -1,7 +1,13 @@
 /* Global Styles */
 body {
-    font-family: 'Poppins', sans-serif;
+    padding-top: 50px !important;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 3px;
     color: #333;
+}
+
+.navbar-brand {
+    letter-spacing: 1px !important;
 }
 
 /* Custom Colors */
@@ -28,29 +34,33 @@ body {
     color: #d9eb72 !important;
 }
 
-.bg-warning {
-    background-color: #F9A826 !important;
+.btn-warning {
+    background-color: transparent;
+    border-color: #fafafa;
+    color: #ffffff !important;
 }
 
-.btn-warning {
-    background-color: #F9A826;
-    border-color: #F9A826;
-    color: #fff !important;
-}
 
 .btn-warning:hover {
-    background-color: #e69500;
-    border-color: #e69500;
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #ffffff;
 }
 
 /* Hero Section */
 .hero {
     min-height: 100vh;
-    background-image: url('https://images.unsplash.com/photo-1590333748338-d629e4564ad9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-image: url('../img/home.jpeg');
     background-size: cover;
-    background-position: center;
+    background-position: 40% 0%;
     background-attachment: fixed;
     /* Parallax effect */
+}
+
+.hero h1 {
+    padding-top: 50px;
+    letter-spacing: 5px;
+    font-weight: 900 !important;
+    text-shadow: 3px 3px 3px rgba(181, 220, 140, 0.8);
 }
 
 .hero-overlay {
@@ -140,9 +150,10 @@ html {
 
 /* Footer Styles */
 .footer-section {
-    background-image: url('https://images.unsplash.com/photo-1550258987-190a2d41a8ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-image: url('../img/footer.jpeg');
     background-size: cover;
-    background-position: center;
+    background-position: 50% 70%;
+    /* Ganti angka 100% ini untuk naik/turun */
     position: relative;
     color: rgba(255, 255, 255, 0.8);
 }
@@ -153,7 +164,8 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(60, 50, 45, 0.9); /* Dark earthy overlay */
+    background: rgba(60, 50, 45, 0.5);
+    /* Dark earthy overlay */
 }
 
 .footer-content {
@@ -171,4 +183,18 @@ html {
 
 .footer-link:hover {
     color: #fff;
+}
+
+/* Gallery Styles */
+.gallery-item {
+    height: 300px;
+    cursor: pointer;
+}
+
+.gallery-img {
+    transition: transform 0.4s ease-in-out;
+}
+
+.gallery-item:hover .gallery-img {
+    transform: scale(1.1);
 }
