@@ -46,6 +46,10 @@ body {
     border-color: #ffffff;
 }
 
+.bg-custom {
+    background-color: #e5f6ba;
+}
+
 /* Hero Section */
 .hero {
     min-height: 100vh;
