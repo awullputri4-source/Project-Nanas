@@ -12,6 +12,7 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
     <!-- CSS Khusus Bento -->
     <link rel="stylesheet" href="css/bento.css">
 </head>
@@ -70,7 +71,7 @@
                 <!-- Image Card 1 (Wide) -->
                 <div class="bento-item bento-span-2">
                     <div class="bento-img-wrapper" data-bs-toggle="modal" data-bs-target="#imageGalleryModal"
-                        onclick="const c = bootstrap.Carousel.getOrCreateInstance(document.getElementById('galleryCarousel')); c.to(0);">
+                        onclick="bootstrap.Carousel.getOrCreateInstance(document.getElementById('galleryCarousel')).to(0);">
                         <img src="img/ladang.jpeg" style="object-position: 50% 20%;" alt="Kebun Nanas">
                         <div class="bento-img-overlay">
                             <span>KEBUN KAMI</span>
@@ -81,9 +82,8 @@
                 <!-- Image Card 2 (Square) -->
                 <div class="bento-item">
                     <div class="bento-img-wrapper" data-bs-toggle="modal" data-bs-target="#imageGalleryModal"
-                        onclick="const c = bootstrap.Carousel.getOrCreateInstance(document.getElementById('galleryCarousel')); c.to(1);">
-                        <img src="img/pegang.jpeg"
-                            alt="Nanas Segar">
+                        onclick="bootstrap.Carousel.getOrCreateInstance(document.getElementById('galleryCarousel')).to(1);">
+                        <img src="img/pegang.jpeg" alt="Nanas Segar">
                         <div class="bento-img-overlay">
                             <span>SEGAR</span>
                         </div>
@@ -93,11 +93,9 @@
                 <!-- Image Card 3 (Tall) -->
                 <div class="bento-item bento-span-row-2">
                     <div class="bento-img-wrapper" data-bs-toggle="modal" data-bs-target="#imageGalleryModal"
-                        onclick="const c = bootstrap.Carousel.getOrCreateInstance(document.getElementById('galleryCarousel')); c.to(2);">
+                        onclick="bootstrap.Carousel.getOrCreateInstance(document.getElementById('galleryCarousel')).to(2);">
                         <video src="vid/JJ.mp4" autoplay loop muted playsinline></video>
                         <div class="bento-img-overlay">
-                            <i class="bi bi-play-circle"></i>
-                            <span>NANAS MADU</span>
                         </div>
                     </div>
                 </div>
@@ -105,7 +103,7 @@
                 <!-- Image Card 4 (Square) -->
                 <div class="bento-item">
                     <div class="bento-img-wrapper" data-bs-toggle="modal" data-bs-target="#imageGalleryModal"
-                        onclick="const c = bootstrap.Carousel.getOrCreateInstance(document.getElementById('galleryCarousel')); c.to(3);">
+                        onclick="bootstrap.Carousel.getOrCreateInstance(document.getElementById('galleryCarousel')).to(3);">
                         <img src="img/duo.jpeg" style="object-position: 50% 70%;" alt="Nanas Queen">
                         <div class="bento-img-overlay">
                             <span>NANAS QUEEN</span>
@@ -123,11 +121,9 @@
                 <!-- Image Card 5 (Wide) -->
                 <div class="bento-item bento-span-2">
                     <div class="bento-img-wrapper" data-bs-toggle="modal" data-bs-target="#imageGalleryModal"
-                        onclick="const c = bootstrap.Carousel.getOrCreateInstance(document.getElementById('galleryCarousel')); c.to(4);">
+                        onclick="bootstrap.Carousel.getOrCreateInstance(document.getElementById('galleryCarousel')).to(4);">
                         <video src="vid/edit.MOV" autoplay loop muted playsinline></video>
                         <div class="bento-img-overlay" style="transition: opacity 0.3s;">
-                            <i class="bi bi-play-circle"></i>
-                            <span>PANEN PAGI</span>
                         </div>
                     </div>
                 </div>
@@ -143,6 +139,47 @@
         </div>
     </section>
 
+    <!-- Polaroid Stack Section -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Bagian Kiri: Bingkai Polaroid -->
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="polaroid-stack-container">
+                        <div class="polaroid-stack">
+                            <div class="polaroid">
+                                <div class="polaroid-placeholder">FOTO 1</div>
+                            </div>
+                            <div class="polaroid">
+                                <div class="polaroid-placeholder">FOTO 2</div>
+                            </div>
+                            <div class="polaroid">
+                                <div class="polaroid-placeholder">FOTO 3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian Kanan: Penjelasan -->
+                <div class="col-lg-6 ps-lg-5">
+                    <h2 class="fw-bold mb-4" style="color: #2E7D32; letter-spacing: 2px;">CERITA DI BALIK KEBUN</h2>
+                    <p class="text-muted mb-4" style="line-height: 1.8; font-size: 0.9rem;">
+                        Berpengalaman dalam budidaya nanas sejak tahun 2011, perkebunan kami berdedikasi untuk terus
+                        menghasilkan buah berkualitas tinggi melalui perawatan yang cermat, termasuk penggunaan pupuk
+                        yang optimal.
+                    </p>
+                    <p class="text-muted" style="line-height: 1.8; font-size: 0.9rem;">
+                        Siklus operasional kami dikelola secara sistematis berdasarkan musim; pada puncak panen raya
+                        yang biasanya terjadi di bulan ke-6 dan ke-11, panen dilakukan secara intensif setiap hari,
+                        dengan rekor pencapaian panen terbanyak yang pernah kami raih mencapai 1.500 buah nanas. Di sisi
+                        lain, pada periode luar musim raya, kami tetap menjaga stabilitas ketersediaan pasokan melalui
+                        jadwal panen rutin satu kali dalam seminggu.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Image Gallery Modal -->
     <div class="modal fade" id="imageGalleryModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -154,26 +191,26 @@
                     <div id="galleryCarousel" class="carousel slide">
                         <div class="carousel-inner rounded-3 overflow-hidden">
                             <div class="carousel-item active">
-                                <img src="img/ladang.jpeg" class="d-block w-100 bg-black" style="height: 80vh; object-fit: contain;" alt="Kebun Nanas">
+                                <img src="img/ladang.jpeg" class="d-block w-100 bg-black"
+                                    style="height: 80vh; object-fit: contain;" alt="Kebun Nanas">
                             </div>
                             <div class="carousel-item">
-                                <img src="img/pegang.jpeg"
-                                    class="d-block w-100 bg-black" style="height: 80vh; object-fit: contain;" alt="Nanas Segar">
+                                <img src="img/pegang.jpeg" class="d-block w-100 bg-black"
+                                    style="height: 80vh; object-fit: contain;" alt="Nanas Segar">
                             </div>
                             <div class="carousel-item bg-black">
                                 <video src="vid/JJ.mp4" class="d-block w-100 position-relative"
-                                    style="height: 80vh; object-fit: contain; z-index: 20;" controls
-                                    playsinline disablePictureInPicture controlsList="nodownload"></video>
+                                    style="height: 80vh; object-fit: contain; z-index: 20;" controls playsinline
+                                    disablePictureInPicture controlsList="nodownload"></video>
                             </div>
                             <div class="carousel-item">
-                                <img src="img/duo.jpeg"
-                                    class="d-block w-100 bg-black"
+                                <img src="img/duo.jpeg" class="d-block w-100 bg-black"
                                     style="height: 80vh; object-fit: contain;" alt="Nanas Queen">
                             </div>
                             <div class="carousel-item bg-black">
                                 <video src="vid/edit.MOV" class="d-block w-100 position-relative"
-                                    style="height: 80vh; object-fit: contain; z-index: 20;" controls
-                                    playsinline disablePictureInPicture controlsList="nodownload"></video>
+                                    style="height: 80vh; object-fit: contain; z-index: 20;" controls playsinline
+                                    disablePictureInPicture controlsList="nodownload"></video>
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel"
@@ -207,7 +244,7 @@
                     <p class="mb-1 text-light fs-6">Jl. Raya Jalan Cagak No. 12,</p>
                     <p class="mb-4 text-light fs-6">Subang, Jawa Barat 41281</p>
                     <p class="mb-5 text-light fs-6">+62 812 3456 7890</p>
-                    <p class="small text-muted mb-0">&copy; 2026 Nanas Bang Amir. All rights reserved.</p>
+                    <p class="small text-light mb-0">&copy; 2026 Nanas Bang Amir. All rights reserved.</p>
                 </div>
 
                 <!-- Column 2: TENTANG KAMI -->
